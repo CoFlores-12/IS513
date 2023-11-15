@@ -1,0 +1,40 @@
+CREATE DATABASE test;
+
+USE test;
+
+CREATE TABLE usuarios (
+	codigoUsuario varchar(20) PRIMARY KEY,
+    nombre varchar(50),
+    apellido varchar(50),
+    departamento varchar(100),
+    correo varchar(90),
+    telefono varchar(20)
+);
+
+CREATE TABLE perfil (
+	idPerfil int PRIMARY KEY AUTO_INCREMENT,
+    rol varchar(20),
+    descripcion varchar(20)
+);
+
+ALTER TABLE usuarios
+ADD COLUMN idPerfil int;
+ADD FOREIGN KEY(idPerfil) REFERENCES perfil(idPerfil);
+
+CREATE TABLE empleado (
+	dni varchar(20) PRIMARY KEY,
+    nombre varchar(20),
+    apellido varchar(20),
+    fechaPago date
+);
+
+CREATE TABLE historicoPagos (
+	fechaPagos date,
+    dni varchar(20),
+    FOREIGN KEY (dni) REFERENCES empleado(dni),
+    horasTrabajadas int,
+    precioPorHora decimal(10,2),
+    totalSueldo decimal(10,2)
+);
+
+INSERT INTO `perfil` (`idPerfil`, `rol`, `descripcion`) VALUES ('1', 'admin', 'admin');

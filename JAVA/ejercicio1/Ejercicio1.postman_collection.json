@@ -1,0 +1,61 @@
+{
+	"info": {
+		"_postman_id": "83fa00f2-6738-4a69-89df-066a7e176549",
+		"name": "Ejercicio1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15910547",
+		"_collection_link": "https://orange-robot-202225.postman.co/workspace/My-Workspace~73a995ad-bd1d-40df-8ecd-5ea3ca5ed4ca/collection/15910547-83fa00f2-6738-4a69-89df-066a7e176549?action=share&source=collection_link&creator=15910547"
+	},
+	"item": [
+		{
+			"name": "crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigoUsuario\": \"01\",\r\n    \"nombre\": \"Cesar\",\r\n    \"apellido\": \"Flores\",\r\n    \"departamento\": \"Francisco Morazan\",\r\n    \"correo\": \"cofloresf@unah.hn\",\r\n    \"telefono\": \"87938413\",\r\n    \"idperfil\": {\r\n        \"idperfil\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/usuarios/crear",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener perfil",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/perfiles/obtener/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"perfiles",
+						"obtener",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
