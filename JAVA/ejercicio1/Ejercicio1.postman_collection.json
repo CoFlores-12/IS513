@@ -14,7 +14,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"codigoUsuario\": \"01\",\r\n    \"nombre\": \"Cesar\",\r\n    \"apellido\": \"Flores\",\r\n    \"departamento\": \"Francisco Morazan\",\r\n    \"correo\": \"cofloresf@unah.hn\",\r\n    \"telefono\": \"87938413\",\r\n    \"idperfil\": {\r\n        \"idperfil\": 1\r\n    }\r\n}",
+					"raw": "{\r\n    \"codigoUsuario\": \"02\",\r\n    \"nombre\": \"Obeth\",\r\n    \"apellido\": \"Flores\",\r\n    \"departamento\": \"Francisco Morazan\",\r\n    \"correo\": \"cofloresf@unah.hn\",\r\n    \"telefono\": \"87938413\",\r\n    \"perfil\": {\r\n        \"idperfil\": 1\r\n    }\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -42,16 +42,57 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/api/perfiles/obtener/1",
+					"raw": "localhost:8080/api/usuarios/obtener",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"api",
-						"perfiles",
+						"usuarios",
+						"obtener"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener perfil Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/usuarios/obtener/01",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios",
 						"obtener",
-						"1"
+						"01"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/usuarios/eliminar/01",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios",
+						"eliminar",
+						"01"
 					]
 				}
 			},

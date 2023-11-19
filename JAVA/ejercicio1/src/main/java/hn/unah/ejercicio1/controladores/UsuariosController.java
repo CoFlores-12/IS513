@@ -26,9 +26,9 @@ public class UsuariosController {
     
     @PostMapping("/crear")
     public Usuarios newUser(@RequestBody Usuarios nuevoUsuario){
-        Integer idPerfil = nuevoUsuario.getIdperfil().getIdperfil();
+        Integer idPerfil = nuevoUsuario.getPerfil().getIdperfil();
         if (this.perfilesServiceImpl.exist(idPerfil)) {
-            nuevoUsuario.setIdperfil(this.perfilesServiceImpl.obtenerPorId(idPerfil));
+            nuevoUsuario.setPerfil(this.perfilesServiceImpl.obtenerPorId(idPerfil));
         }
         return this.usuariosServiceImpl.crearUsuario(nuevoUsuario);
     }
@@ -44,9 +44,12 @@ public class UsuariosController {
     }
 
     @DeleteMapping("/eliminar/{codigo}")
-    public void deleteEliminar(@PathVariable String codigo){
-        this.usuariosServiceImpl.eliminarUsuarios(codigo);
+    public String deleteEliminar(@PathVariable String codigo){
+        Usuarios usuario = this.usuariosServiceImpl.obtenerPorCodigo(codigo);
+        if (usuario != null) {
+            this.usuariosServiceImpl.eliminarUsuarios(codigo);
+            return "eliminado";
+        }
+        return "Usuario no encontrado";
     }
-
-
 }

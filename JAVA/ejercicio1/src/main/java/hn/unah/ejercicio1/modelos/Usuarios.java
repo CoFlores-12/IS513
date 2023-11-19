@@ -1,5 +1,7 @@
 package hn.unah.ejercicio1.modelos;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -39,7 +41,7 @@ public class Usuarios {
     @Column(name = "telefono")
     private String telefono;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="idperfil")
-    private Perfiles idperfil;
+    @ManyToOne()
+    @JoinColumn(name="idperfil", referencedColumnName = "idperfil")
+    private Perfiles perfil;
 }

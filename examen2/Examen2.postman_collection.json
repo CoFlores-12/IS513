@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "d20dbb7b-c6b1-4022-a983-cff4d7d015ee",
+		"name": "Examen2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15910547",
+		"_collection_link": "https://orange-robot-202225.postman.co/workspace/My-Workspace~73a995ad-bd1d-40df-8ecd-5ea3ca5ed4ca/collection/15910547-d20dbb7b-c6b1-4022-a983-cff4d7d015ee?action=share&source=collection_link&creator=15910547"
+	},
+	"item": [
+		{
+			"name": "localhost:8080/api/artista/crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigoartista\": \"12\",\r\n    \"nombreartistico\": \"IS\",\r\n    \"nombre\": \"Obeth\",\r\n    \"apellido\": \"Flores\",\r\n    \"fechanacimiento\": \"2001-06-12\",\r\n    \"contacto\": {\r\n        \"pais\": \"HN\",\r\n        \"ciudad\": \"Tegucigalpa\",\r\n        \"telefono\": \"9999999\",\r\n        \"correo\": \"cofloresf@unah.hn\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/artista/crear",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"artista",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/artista/eliminar/12",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/artista/eliminar/12",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"artista",
+						"eliminar",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/artista/buscar/5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/artista/todos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"artista",
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/artista/actualizar/5",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"pais\": \"HN\",\r\n        \"ciudad\": \"Distrito Central\",\r\n        \"telefono\": \"9999999\",\r\n        \"correo\": \"cofloresf@unah.hn\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/artista/actualizar/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"artista",
+						"actualizar",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/canciones/delartista/5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/canciones/delartista/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"canciones",
+						"delartista",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/canciones/crear",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\": \"song 2\",\r\n    \"album\": \"album 3\",\r\n    \"aniolanzamiento\": \"2023\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/canciones/crear",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"canciones",
+						"crear"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/canciones/eliminar/2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/canciones/eliminar/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"canciones",
+						"eliminar",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/canciones/nombre/song 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/canciones/nombre/song 1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"canciones",
+						"nombre",
+						"song 1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/canciones/asociar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigoArtista\": 5,\r\n    \"codigoCancion\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/canciones/asociar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"canciones",
+						"asociar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8080/api/canciones/eliminar/2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/canciones/eliminar/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"canciones",
+						"eliminar",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
